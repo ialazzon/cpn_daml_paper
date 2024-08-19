@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<daml:SContract
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:daml="http://www.example.org/daml">
+  <template
+      name="Iou"
+      observer="//@party.1"
+      signatory="//@party.0">
+    <choice
+        name="Transfer"
+        controller="//@party.0 //@party.1"/>
+  </template>
+  <template
+      name="IouProposal1"
+      observer="//@party.3"
+      signatory="//@party.2"
+      referenced_template="//@template.0">
+    <choice
+        name="IouProposal_Accept1"
+        controller="//@party.3"
+        exercised_choice="//@template.0/@choice.0"/>
+    <choice
+        name="IouProposal_Accept2"
+        controller="//@party.3"
+        exercised_choice="//@template.0/@choice.0"/>
+  </template>
+  <party name="issuer"/>
+  <party name="owner"/>
+  <party name="iou_issuer"/>
+  <party name="iou_owner"/>
+</daml:SContract>

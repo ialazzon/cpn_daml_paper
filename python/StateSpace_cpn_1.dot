@@ -1,0 +1,26 @@
+digraph cpn_tools_graph {
+  N1 -> N5 [ label="A4:T3 {p=alice}" ];
+  N1 -> N4 [ label="A3:T3 {p=bob}" ];
+  N1 -> N3 [ label="A2:T2 {p=bob}" ];
+  N1 -> N2 [ label="A1:T2 {p=alice}" ];
+  N12 -> N16 [ label="A23:Transfer {controller=alice,owner=alice}" ];
+  N15 -> N17 [ label="A24:Transfer {controller=bob,owner=bob}" ];
+  N2 -> N9 [ label="A8:T3 {p=bob}" ];
+  N2 -> N8 [ label="A7:T3 {p=alice}" ];
+  N2 -> N7 [ label="A6:Iou {owner=bob,signatory=alice,issuer=alice}" ];
+  N2 -> N6 [ label="A5:Iou {owner=alice,signatory=alice,issuer=alice}" ];
+  N3 -> N11 [ label="A10:T3 {p=bob}" ];
+  N3 -> N10 [ label="A9:T3 {p=alice}" ];
+  N4 -> N11 [ label="A12:T2 {p=bob}" ];
+  N4 -> N9 [ label="A11:T2 {p=alice}" ];
+  N5 -> N8 [ label="A14:T2 {p=alice}" ];
+  N5 -> N10 [ label="A13:T2 {p=bob}" ];
+  N6 -> N13 [ label="A16:T3 {p=bob}" ];
+  N6 -> N12 [ label="A15:T3 {p=alice}" ];
+  N7 -> N15 [ label="A18:T3 {p=bob}" ];
+  N7 -> N14 [ label="A17:T3 {p=alice}" ];
+  N8 -> N14 [ label="A20:Iou {owner=bob,signatory=alice,issuer=alice}" ];
+  N8 -> N12 [ label="A19:Iou {owner=alice,signatory=alice,issuer=alice}" ];
+  N9 -> N15 [ label="A22:Iou {owner=bob,signatory=alice,issuer=alice}" ];
+  N9 -> N13 [ label="A21:Iou {owner=alice,signatory=alice,issuer=alice}" ];
+}
